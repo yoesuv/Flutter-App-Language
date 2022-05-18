@@ -1,7 +1,4 @@
 {
-    "helloWorld": "Hello World!",
-    "@helloWorld": {
-      "description": "The conventional newborn programmer greeting"
-    },
-    "app_name" : "Flutter App Bahasa"
+  "app_name" : "Flutter App Bahasa",
+  "app_language_info" : "Aplikasi ini tersedia dalam bahasa indonesia dan inggris."
 }

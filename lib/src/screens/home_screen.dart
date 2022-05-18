@@ -11,11 +11,14 @@ class HomeScreen extends StatelessWidget {
         title: Text(AppLocalizations.of(context)?.app_name ?? ''),
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: const [
-            Text('App Language'),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(AppLocalizations.of(context)?.app_language_info ?? ''),
+            ],
+          ),
         ),
       ),
     );
