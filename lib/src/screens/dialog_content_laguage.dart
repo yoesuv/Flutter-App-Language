@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DialogContentLanguage extends StatelessWidget {
-  final Function()? onTap;
-  const DialogContentLanguage({Key? key, this.onTap}) : super(key: key);
+  final Function(String languageCode) onTap;
+  const DialogContentLanguage({Key? key, required this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,9 @@ class DialogContentLanguage extends StatelessWidget {
         itemCount: AppLocalizations.supportedLocales.length,
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: onTap,
+            onTap: () {
+              onTap(AppLocalizations.supportedLocales[index].languageCode);
+            },
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Text(

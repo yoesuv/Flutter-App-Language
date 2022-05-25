@@ -11,9 +11,9 @@ class HomeScreen extends StatelessWidget {
       builder: (context) => AlertDialog(
         title: Text(AppLocalizations.of(context)?.change_language ?? ''),
         content: DialogContentLanguage(
-          onTap: () {
+          onTap: (String languageCode) {
             Navigator.of(context).pop();
-            debugPrint('HomeScreen # on tap dialog');
+            debugPrint('HomeScreen # on tap dialog $languageCode');
           },
         ),
       ),

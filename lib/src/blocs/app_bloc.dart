@@ -5,7 +5,7 @@ import 'package:app_language/src/states/app_state.dart';
 import 'package:bloc/bloc.dart';
 
 class AppBloc extends Bloc<AppEvent, AppState> {
-  AppBloc() : super(const AppState(locale: Locale('en'))) {
+  AppBloc() : super(const AppState()) {
     on<AppInitEvent>(_onAppInit);
     on<AppChangeLanguageEvent>(_onChangeLanguage);
   }
