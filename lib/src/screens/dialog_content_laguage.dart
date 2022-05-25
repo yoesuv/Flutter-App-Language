@@ -1,3 +1,4 @@
+import 'package:app_language/src/utils/extension_locale.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -20,7 +21,7 @@ class DialogContentLanguage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Text(
-                AppLocalizations.supportedLocales[index].languageCode,
+                AppLocalizations.supportedLocales[index].fullName(),
               ),
             ),
           );
