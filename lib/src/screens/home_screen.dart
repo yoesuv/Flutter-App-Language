@@ -1,9 +1,19 @@
+import 'package:app_language/src/blocs/app_bloc.dart';
 import 'package:app_language/src/screens/dialog_content_laguage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+
+  late AppBloc? _appBloc;
 
   void _openDialog(BuildContext context) {
     showDialog(
@@ -18,6 +28,11 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override

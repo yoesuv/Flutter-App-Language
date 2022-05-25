@@ -1,6 +1,6 @@
 import 'package:app_language/src/blocs/app_bloc.dart';
 import 'package:app_language/src/events/app_event.dart';
-import 'package:app_language/src/screens/home_screen.dart';
+import 'package:app_language/src/routes/app_route.dart';
 import 'package:app_language/src/states/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             primarySwatch: Colors.teal,
           ),
-          home: const HomeScreen(),
+          onGenerateRoute: AppRoute.routes,
         );
       },
     );
