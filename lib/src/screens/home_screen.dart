@@ -1,4 +1,5 @@
 import 'package:app_language/src/blocs/app_bloc.dart';
+import 'package:app_language/src/events/app_event.dart';
 import 'package:app_language/src/screens/dialog_content_laguage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         content: DialogContentLanguage(
           onTap: (String languageCode) {
             Navigator.of(context).pop();
-            debugPrint('HomeScreen # on tap dialog $languageCode');
+            _appBloc?.add(AppChangeLanguageEvent(languageCode: languageCode));
           },
         ),
       ),
@@ -33,6 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    _appBloc = context.read<AppBloc>();
   }
 
   @override

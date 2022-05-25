@@ -7,45 +7,37 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-
-  late AppBloc? _bloc;
-
-  @override
-  void initState() {
-    super.initState();
-    _bloc = AppBloc();
-    _bloc?.add(AppInitEvent(locale: const Locale('en')));
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AppBloc, AppState>(
-      bloc: _bloc,
-      builder: (context, state) {
-        return MaterialApp(
-          title: 'Flutter App Language',
-          localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: state.locale,
-          theme: ThemeData(
-            primarySwatch: Colors.teal,
-          ),
-          onGenerateRoute: AppRoute.routes,
-        );
-      },
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<AppBloc>(
+          create: (context) =>
+              AppBloc()..add(AppInitEvent(locale: const Locale('en'))),
+        ),
+      ],
+      child: BlocBuilder<AppBloc, AppState>(
+        builder: (context, state) {
+          return MaterialApp(
+            title: 'Flutter App Language',
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizations.supportedLocales,
+            locale: state.locale,
+            theme: ThemeData(
+              primarySwatch: Colors.teal,
+            ),
+            onGenerateRoute: AppRoute.routes,
+          );
+        },
+      ),
     );
   }
 }
