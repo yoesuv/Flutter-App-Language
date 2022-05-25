@@ -3,5 +3,6 @@
   "app_language_info" : "This app is available in english and indonesia language, change language settings below.",
   "settings": "Settings",
   "english" : "English",
-  "indonesia" : "Indonesia"
+  "indonesia" : "Indonesia",
+  "change_language": "Change Language"
 }

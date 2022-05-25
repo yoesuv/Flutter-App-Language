@@ -31,6 +31,21 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
+              const Divider(),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    AppLocalizations.of(context)?.settings ?? '',
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                        AppLocalizations.of(context)?.change_language ?? ''),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
