@@ -1,6 +1,7 @@
 import 'package:app_language/src/blocs/app_bloc.dart';
 import 'package:app_language/src/events/app_event.dart';
 import 'package:app_language/src/screens/dialog_content_laguage.dart';
+import 'package:app_language/src/states/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -13,7 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   late AppBloc? _appBloc;
 
   void _openDialog(BuildContext context) {
@@ -69,9 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    AppLocalizations.of(context)?.settings ?? '',
-                  ),
+                  BlocBuilder<AppBloc, AppState>(builder: (context, state) {
+                    return Text(state.strLanguage ?? '');
+                  }),
                   ElevatedButton(
                     onPressed: () {
                       _openDialog(context);

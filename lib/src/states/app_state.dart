@@ -3,11 +3,14 @@ import 'package:flutter/material.dart';
 
 class AppState extends Equatable {
   final Locale? locale;
-  const AppState({this.locale});
+  final String? strLanguage;
+  const AppState({this.locale, this.strLanguage});
 
-  AppState copyWith({Locale? locale}) =>
-      AppState(locale: locale ?? this.locale);
+  AppState copyWith({Locale? locale, String? strLanguage}) => AppState(
+        locale: locale ?? this.locale,
+        strLanguage: strLanguage ?? this.strLanguage,
+      );
 
   @override
-  List<Object?> get props => [locale];
+  List<Object?> get props => [locale, strLanguage];
 }
