@@ -1,6 +1,12 @@
 ## App Language ###
 
-Flutter app with multiple language localization.
+Flutter app with multiple language localization.  
+Download apk file [here](https://www.dropbox.com/s/l1v7nateqo75bzb)
+
+#### Screenshot Android ####
+| English | Indonesia | Dialog |
+| :---: | :---: | :---: |
+| ![](https://images2.imgbox.com/7a/54/PBFsZ1aQ_o.png) | ![](https://images2.imgbox.com/f9/bc/rGofAsmf_o.png) | ![](https://images2.imgbox.com/fc/d8/9rIiYNW1_o.png) |
 
 #### Screenshot iOS ####
 | English | Indonesia | Dialog |
