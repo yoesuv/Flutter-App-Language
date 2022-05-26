@@ -1,0 +1,8 @@
+{
+  "app_name" : "Flutter App Bahasa",
+  "app_language_info" : "Aplikasi ini tersedia dalam bahasa indonesia dan inggris, ganti bahasa dengan pengaturan dibawah.",
+  "settings": "Pengaturan",
+  "english" : "Inggris",
+  "indonesia" : "Indonesia",
+  "change_language": "Ganti Bahasa"
+}

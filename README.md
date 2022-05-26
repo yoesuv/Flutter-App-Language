@@ -1,16 +1,24 @@
-# app_language
+## App Language ###
 
-A new Flutter project.
+Flutter app with multiple language localization.  
+Download apk file [here](https://www.dropbox.com/s/l1v7nateqo75bzb)
 
-## Getting Started
+#### Screenshot Android ####
+| English | Indonesia | Dialog |
+| :---: | :---: | :---: |
+| ![](https://images2.imgbox.com/7a/54/PBFsZ1aQ_o.png) | ![](https://images2.imgbox.com/f9/bc/rGofAsmf_o.png) | ![](https://images2.imgbox.com/fc/d8/9rIiYNW1_o.png) |
 
-This project is a starting point for a Flutter application.
+#### Screenshot iOS ####
+| English | Indonesia | Dialog |
+| :---: | :---: | :---: |
+| ![](https://images2.imgbox.com/ec/e4/pAknpCTs_o.png) | ![](https://images2.imgbox.com/8b/28/4kywguqY_o.png) | ![](https://images2.imgbox.com/8e/c3/l21Df4jr_o.png) |
 
-A few resources to get you started if this is your first Flutter project:
+#### Libraries ####
+- [Equatable](https://pub.dev/packages/equatable)
+- [Flutter Bloc](https://pub.dev/packages/flutter_bloc)
+- [intl](https://pub.dev/packages/intl)
+- [Shared Preference](https://pub.dev/packages/shared_preferences)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### References ####
+ - [Internationalizing Flutter apps](https://docs.flutter.dev/development/accessibility-and-localization/internationalization)
+ - [Youtube](https://www.youtube.com/watch?v=Zw4KoorVxgg)
