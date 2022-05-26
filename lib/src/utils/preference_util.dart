@@ -1,12 +1,13 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PreferenceUtil {
-  static Future<SharedPreferences> get instance async =>
-      _prefsInstance ??= await SharedPreferences.getInstance();
-  static SharedPreferences? _prefsInstance;
+  static void setString(String key, String value) async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString(key, value);
+  }
 
-  static Future<SharedPreferences?> init() async {
-    _prefsInstance = await instance;
-    return _prefsInstance;
+  static Future<String?> getString(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString(key);
   }
 }

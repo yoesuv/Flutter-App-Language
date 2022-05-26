@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<AppBloc>(
-          create: (context) =>
-              AppBloc()..add(AppInitEvent(locale: const Locale('en'))),
+          create: (context) => AppBloc()..add(AppInitEvent()),
         ),
       ],
       child: BlocBuilder<AppBloc, AppState>(
