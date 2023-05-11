@@ -1,7 +1,7 @@
-import 'package:app_language/src/blocs/app_bloc.dart';
-import 'package:app_language/src/events/app_event.dart';
-import 'package:app_language/src/routes/app_route.dart';
-import 'package:app_language/src/states/app_state.dart';
+import 'package:app_language/src/my_app_bloc.dart';
+import 'package:app_language/src/my_app_event.dart';
+import 'package:app_language/src/core/routes/app_route.dart';
+import 'package:app_language/src/my_app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<AppBloc>(
-          create: (context) => AppBloc()..add(AppInitEvent()),
+        BlocProvider<MyAppBloc>(
+          create: (context) => MyAppBloc()..add(MyAppInitEvent()),
         ),
       ],
-      child: BlocBuilder<AppBloc, AppState>(
+      child: BlocBuilder<MyAppBloc, MyAppState>(
         builder: (context, state) {
           return MaterialApp(
             title: 'Flutter App Language',

@@ -1,4 +1,4 @@
-import 'package:app_language/src/screens/home_screen.dart';
+import 'package:app_language/src/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoute {
