@@ -69,9 +69,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  BlocBuilder<MyAppBloc, MyAppState>(builder: (context, state) {
-                    return Text(state.strLanguage ?? '');
-                  }),
+                  BlocBuilder<MyAppBloc, MyAppState>(
+                    builder: (context, state) {
+                      return Text(
+                        state.strLanguage ?? '',
+                        style: const TextStyle(
+                          fontSize: 14,
+                        ),
+                      );
+                    },
+                  ),
                   ElevatedButton(
                     onPressed: () {
                       _openDialog(context);

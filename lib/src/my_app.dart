@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: BlocBuilder<MyAppBloc, MyAppState>(
+        buildWhen: (prev, current) => prev.locale != current.locale,
         builder: (context, state) {
           return MaterialApp(
             title: 'Flutter App Language',
