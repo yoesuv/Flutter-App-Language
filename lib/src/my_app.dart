@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
             locale: state.locale,
             theme: ThemeData(
               primarySwatch: Colors.teal,
+              useMaterial3: false,
             ),
             onGenerateRoute: AppRoute.routes,
           );
