@@ -1,10 +1,6 @@
-import 'package:app_language/src/my_app_bloc.dart';
-import 'package:app_language/src/my_app_event.dart';
 import 'package:app_language/src/ui/dialog_content_laguage.dart';
-import 'package:app_language/src/my_app_state.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,17 +10,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late MyAppBloc? _appBloc;
-
   void _openDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(AppLocalizations.of(context)?.change_language ?? ''),
+        title: Text("change_language".tr()),
         content: DialogContentLanguage(
           onTap: (String languageCode) {
             Navigator.of(context).pop();
-            _appBloc?.add(MyAppChangeLanguageEvent(languageCode: languageCode));
+            debugPrint("HomeScreen # language code $languageCode");
+            context.setLocale(Locale(languageCode));
           },
         ),
       ),
@@ -34,14 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _appBloc = context.read<MyAppBloc>();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)?.app_name ?? ''),
+        title: Text("app_name".tr()),
       ),
       body: SafeArea(
         child: Padding(
@@ -51,14 +45,14 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                AppLocalizations.of(context)?.app_language_info ?? '',
+                "app_language_info".tr(),
                 style: const TextStyle(
                   fontSize: 14,
                 ),
               ),
               const SizedBox(height: 32),
               Text(
-                AppLocalizations.of(context)?.settings ?? '',
+                "settings".tr(),
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
@@ -69,22 +63,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  BlocBuilder<MyAppBloc, MyAppState>(
-                    builder: (context, state) {
-                      return Text(
-                        state.strLanguage ?? '',
-                        style: const TextStyle(
-                          fontSize: 14,
-                        ),
-                      );
-                    },
+                  Text(
+                    'setting bhs',
+                    style: const TextStyle(
+                      fontSize: 14,
+                    ),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       _openDialog(context);
                     },
                     child: Text(
-                      AppLocalizations.of(context)?.change_language ?? '',
+                      "change_language".tr(),
                     ),
                   ),
                 ],
