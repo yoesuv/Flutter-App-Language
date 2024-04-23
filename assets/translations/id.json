@@ -4,5 +4,6 @@
   "settings": "Pengaturan",
   "english" : "Inggris",
   "indonesia" : "Indonesia",
-  "change_language": "Ganti Bahasa"
+  "change_language": "Ganti Bahasa",
+  "current_language": "Indonesia"
 }

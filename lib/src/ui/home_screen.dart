@@ -2,14 +2,9 @@ import 'package:app_language/src/ui/dialog_content_laguage.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  State<StatefulWidget> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   void _openDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -18,17 +13,11 @@ class _HomeScreenState extends State<HomeScreen> {
         content: DialogContentLanguage(
           onTap: (String languageCode) {
             Navigator.of(context).pop();
-            debugPrint("HomeScreen # language code $languageCode");
             context.setLocale(Locale(languageCode));
           },
         ),
       ),
     );
-  }
-
-  @override
-  void initState() {
-    super.initState();
   }
 
   @override
@@ -64,10 +53,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'setting bhs',
-                    style: const TextStyle(
-                      fontSize: 14,
-                    ),
+                    "current_language".tr(),
+                    style: const TextStyle(fontSize: 14),
                   ),
                   ElevatedButton(
                     onPressed: () {
