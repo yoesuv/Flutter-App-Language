@@ -4,5 +4,6 @@
   "settings": "Settings",
   "english" : "English",
   "indonesia" : "Indonesia",
-  "change_language": "Change Language"
+  "change_language": "Change Language",
+  "current_language": "English"
 }
