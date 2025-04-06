@@ -5,10 +5,10 @@ Download apk file [here](https://e.pcloud.link/publink/show?code=XZHI5MZjwtt0ibr
 
 #### Dependencies ###
 ```
-Flutter 3.19.5 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision 300451adae (4 weeks ago) • 2024-03-27 21:54:07 -0500
-Engine • revision e76c956498
-Tools • Dart 3.3.3 • DevTools 2.31.1
+Flutter 3.29.2 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision c236373904 (3 weeks ago) • 2025-03-13 16:17:06 -0400
+Engine • revision 18b71d647a
+Tools • Dart 3.7.2 • DevTools 2.42.3
 ```
 
 #### Screenshot Android ####
