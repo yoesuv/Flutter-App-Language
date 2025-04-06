@@ -8,10 +8,7 @@ void main() async {
 
   runApp(
     EasyLocalization(
-      supportedLocales: const [
-        Locale("en"),
-        Locale("id"),
-      ],
+      supportedLocales: const [Locale("en"), Locale("id")],
       path: "assets/translations",
       fallbackLocale: const Locale("id"),
       child: const MyApp(),

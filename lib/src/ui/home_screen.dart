@@ -8,24 +8,23 @@ class HomeScreen extends StatelessWidget {
   void _openDialog(BuildContext context) {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text("change_language".tr()),
-        content: DialogContentLanguage(
-          onTap: (String languageCode) {
-            Navigator.of(context).pop();
-            context.setLocale(Locale(languageCode));
-          },
-        ),
-      ),
+      builder:
+          (context) => AlertDialog(
+            title: Text("change_language".tr()),
+            content: DialogContentLanguage(
+              onTap: (String languageCode) {
+                Navigator.of(context).pop();
+                context.setLocale(Locale(languageCode));
+              },
+            ),
+          ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("app_name".tr()),
-      ),
+      appBar: AppBar(title: Text("app_name".tr())),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -35,9 +34,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Text(
                 "app_language_info".tr(),
-                style: const TextStyle(
-                  fontSize: 14,
-                ),
+                style: const TextStyle(fontSize: 14),
               ),
               const SizedBox(height: 32),
               Text(
@@ -60,9 +57,7 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       _openDialog(context);
                     },
-                    child: Text(
-                      "change_language".tr(),
-                    ),
+                    child: Text("change_language".tr()),
                   ),
                 ],
               ),
