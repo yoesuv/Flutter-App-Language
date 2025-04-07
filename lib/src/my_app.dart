@@ -13,8 +13,34 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
-        primarySwatch: Colors.teal,
-        useMaterial3: false,
+        appBarTheme: const AppBarTheme(
+          color: Colors.teal,
+          centerTitle: false,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.teal,
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
+          ),
+        ),
+        colorScheme: ColorScheme.fromSeed(
+          surface: Colors.white,
+          seedColor: Colors.teal,
+        ),
+        dialogTheme: DialogTheme(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        ),
+        useMaterial3: true,
       ),
       onGenerateRoute: AppRoute.routes,
     );
