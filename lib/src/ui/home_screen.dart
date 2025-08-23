@@ -3,21 +3,20 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   void _openDialog(BuildContext context) {
     showDialog(
       context: context,
-      builder:
-          (context) => AlertDialog(
-            title: Text("change_language".tr()),
-            content: DialogContentLanguage(
-              onTap: (String languageCode) {
-                Navigator.of(context).pop();
-                context.setLocale(Locale(languageCode));
-              },
-            ),
-          ),
+      builder: (context) => AlertDialog(
+        title: Text("change_language".tr()),
+        content: DialogContentLanguage(
+          onTap: (String languageCode) {
+            Navigator.of(context).pop();
+            context.setLocale(Locale(languageCode));
+          },
+        ),
+      ),
     );
   }
 

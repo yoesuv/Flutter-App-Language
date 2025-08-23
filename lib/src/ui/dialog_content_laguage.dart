@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 
 class DialogContentLanguage extends StatelessWidget {
   final Function(String languageCode) onTap;
-  const DialogContentLanguage({Key? key, required this.onTap})
-    : super(key: key);
+  const DialogContentLanguage({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
