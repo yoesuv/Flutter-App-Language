@@ -1,14 +1,14 @@
-## App Language ###
+## App Language ##
 
-Flutter app with multiple language localization.  
-Download apk file [here](https://e.pcloud.link/publink/show?code=XZLEgdZaw1zRqN7VHy2jCMbbJVCdfBbOTwk)
+Flutter app with multiple language localization.
 
-#### Dependencies ###
+#### Dependencies ####
 ```
-Flutter 3.29.2 • channel stable • https://github.com/flutter/flutter.git
-Framework • revision c236373904 (3 weeks ago) • 2025-03-13 16:17:06 -0400
-Engine • revision 18b71d647a
-Tools • Dart 3.7.2 • DevTools 2.42.3
+Flutter version 3.35.1 on channel stable • https://github.com/flutter/flutter.git
+Framework revision 20f8274939 (8 days ago), 2025-08-14 10:53:09 -0700
+Engine revision 1e9a811bf8
+Dart version 3.9.0
+DevTools version 2.48.0
 ```
 
 #### Screenshot Android ####

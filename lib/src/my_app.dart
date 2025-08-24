@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          color: Colors.teal,
+          backgroundColor: Colors.teal,
           centerTitle: false,
           titleTextStyle: TextStyle(
             color: Colors.white,
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           surface: Colors.white,
           seedColor: Colors.teal,
         ),
-        dialogTheme: DialogTheme(
+        dialogTheme: DialogThemeData(
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
