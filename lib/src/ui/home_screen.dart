@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text("change_language".tr()),
+        title: Text(context.tr("change_language")),
         content: DialogContentLanguage(
           onTap: (String languageCode) {
             Navigator.of(context).pop();
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("app_name".tr())),
+      appBar: AppBar(title: Text(context.tr("app_name"))),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -32,12 +32,12 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "app_language_info".tr(),
+                context.tr("app_language_info"),
                 style: const TextStyle(fontSize: 14),
               ),
               const SizedBox(height: 32),
               Text(
-                "settings".tr(),
+                context.tr("settings"),
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
@@ -49,14 +49,14 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "current_language".tr(),
+                    context.tr("current_language"),
                     style: const TextStyle(fontSize: 14),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       _openDialog(context);
                     },
-                    child: Text("change_language".tr()),
+                    child: Text(context.tr("change_language")),
                   ),
                 ],
               ),
