@@ -27,6 +27,7 @@ println("app/build.gradle # TARGET SDK ${flutter.targetSdkVersion}")
 android {
     namespace "com.yoesuv.app_language"
     compileSdkVersion flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
