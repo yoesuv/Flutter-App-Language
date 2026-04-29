@@ -3,7 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class DialogContentLanguage extends StatelessWidget {
-  final Function(String languageCode) onTap;
+  final void Function(String languageCode) onTap;
   const DialogContentLanguage({super.key, required this.onTap});
 
   @override
