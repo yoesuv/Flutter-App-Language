@@ -1,4 +1,4 @@
-import 'package:app_language/src/ui/dialog_content_laguage.dart';
+import 'package:app_language/src/ui/dialog_content_language.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

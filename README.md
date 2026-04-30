@@ -1,14 +1,14 @@
 ## App Language ##
 
-Flutter app with multiple language localization.
+Flutter demo app showcasing runtime language switching using Easy Localization with English and Indonesian translations.
 
 #### Dependencies ####
 ```
-Flutter version 3.35.1 on channel stable • https://github.com/flutter/flutter.git
-Framework revision 20f8274939 (8 days ago), 2025-08-14 10:53:09 -0700
-Engine revision 1e9a811bf8
-Dart version 3.9.0
-DevTools version 2.48.0
+Flutter 3.41.7 on channel stable • https://github.com/flutter/flutter.git
+Framework revision cc0734ac71 (13 days ago) • 2026-04-15 21:21:08 -0700
+Engine revision 59aa584fdf
+Dart version 3.11.5
+DevTools version 2.54.2
 ```
 
 #### Screenshot Android ####
